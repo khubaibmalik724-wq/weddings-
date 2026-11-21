@@ -128,6 +128,31 @@ body.bare header.top,body.bare footer.bot{display:none}
 .ended .rp{animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 6px rgba(217,192,138,.35)}}
 
+
+/* ---- redesign: wine + champagne-gold ---- */
+:root{--ivory:#fbf6ea;--cream:#f3e9d2;--sand:#e8d9b6;--burg:#5b0e1c;--burg2:#3a0812;--gold:#b8913a;--champ:#e3c98a;--line:#d9c79a}
+body{background:linear-gradient(#fbf6ea,#f6edd9) fixed}
+header.top{background:linear-gradient(180deg,#3a0812,#4d0c1a);border-bottom:1px solid var(--gold)}
+.brand{color:#f3dfae}.brand i{color:var(--champ)}
+nav.main a{color:#f1e4c6}nav.main a:hover,nav.main a.on{color:#fff;border-bottom:1px solid var(--champ)}
+.burger{color:#f1e4c6;border-color:rgba(227,201,138,.5)}
+@media(max-width:860px){nav.main{background:#3a0812;border-bottom:1px solid var(--gold)}}
+.btn{background:linear-gradient(135deg,#7a1630,#4a0a18);color:#f8e8bd;border:1px solid var(--gold);border-radius:0;box-shadow:inset 0 0 0 3px #4a0a18,inset 0 0 0 4px rgba(227,201,138,.55),0 6px 14px rgba(58,8,18,.22);text-shadow:0 1px 0 rgba(0,0,0,.35);padding:.95em 1.9em}
+.btn:hover{background:linear-gradient(135deg,#96203d,#5b0e1c);color:#fff;box-shadow:inset 0 0 0 3px #5b0e1c,inset 0 0 0 4px var(--champ),0 8px 18px rgba(58,8,18,.3);transform:translateY(-1px)}
+.btn.alt{background:transparent;color:var(--burg);box-shadow:inset 0 0 0 3px #fbf6ea,inset 0 0 0 4px rgba(184,145,58,.6);text-shadow:none}
+.btn.alt:hover{background:var(--burg);color:#f8e8bd;box-shadow:inset 0 0 0 3px var(--burg),inset 0 0 0 4px var(--champ)}
+.btn.sm{padding:.6em 1.15em}.btn.bad{background:#8a1f1f;border-color:#8a1f1f}
+.pc{background:#fffdf7;box-shadow:0 10px 24px -14px rgba(58,8,18,.35)}.pc:hover{border-color:var(--gold)}
+.box,.kpi{background:#fffdf7}.box{outline:1px solid rgba(184,145,58,.28);outline-offset:-6px;padding:24px}
+.eyebrow{display:flex;align-items:center;gap:12px}.center .eyebrow{justify-content:center}.eyebrow::before,.eyebrow::after{content:"";height:1px;width:34px;background:linear-gradient(90deg,transparent,var(--gold))}.eyebrow::after{transform:scaleX(-1)}
+.tabs a,.tabs button,.adm-nav a{border:1px solid var(--gold);border-radius:0;box-shadow:inset 0 0 0 2px #fff,inset 0 0 0 3px rgba(184,145,58,.35)}
+.tabs .on,.adm-nav a.on{background:linear-gradient(135deg,#7a1630,#4a0a18);color:#f8e8bd;box-shadow:inset 0 0 0 2px #4a0a18,inset 0 0 0 3px rgba(227,201,138,.6)}
+input,select,textarea{border:1px solid #cdb887;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(227,201,138,.4)}
+.note{border-left:3px solid var(--gold);background:#f7edd6}
+footer.bot{background:linear-gradient(#3a0812,#2a050c);border-top:2px solid var(--gold)}
+.hero{background:radial-gradient(80% 70% at 82% 30%,#f2dfb8 0,transparent 62%),radial-gradient(60% 60% at 5% 90%,#f3d6cf 0,transparent 60%),var(--ivory)}
+.band{background:linear-gradient(#f3e9d2,#efe2c4);border-block:1px solid var(--gold)}
 /* ============ INVITATION STAGE ============ */
 .stage{container-type:inline-size;position:relative;width:100%;aspect-ratio:9/16;overflow:hidden;background:radial-gradient(120% 80% at 50% 25%,var(--bg2),var(--bg));color:var(--ink);isolation:isolate;text-align:center}
 .stage *{box-sizing:border-box}
@@ -170,14 +195,14 @@ body.bare header.top,body.bare footer.bot{display:none}
 /* curtains */
 .s-cur{position:absolute;inset:0;z-index:10;pointer-events:none;animation:gone 0s 6.4s forwards}
 @keyframes gone{to{visibility:hidden}}
-.cp{position:absolute;top:0;bottom:0;width:51%;overflow:hidden;background:repeating-linear-gradient(90deg,rgba(0,0,0,.46) 0,rgba(255,110,110,.14) 2.8%,rgba(0,0,0,.52) 5.6%,rgba(0,0,0,.2) 7.4%),linear-gradient(180deg,#9a1020,#6c0a15 55%,#4b060e);box-shadow:inset 0 0 6cqw rgba(0,0,0,.6),0 0 4cqw rgba(0,0,0,.6)}
+.cp{position:absolute;top:0;bottom:0;width:51%;overflow:hidden;background:repeating-linear-gradient(90deg,rgba(0,0,0,.46) 0,rgba(255,110,110,.14) 2.8%,rgba(0,0,0,.52) 5.6%,rgba(0,0,0,.2) 7.4%),linear-gradient(180deg,var(--cu1),var(--cu2) 55%,var(--cu3));box-shadow:inset 0 0 6cqw rgba(0,0,0,.6),0 0 4cqw rgba(0,0,0,.6)}
 .cp::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.16),transparent 30%,rgba(0,0,0,.4));}
 .cp::after{content:"";position:absolute;inset:0;mix-blend-mode:multiply;opacity:.7;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.08) 0 1px,transparent 1px 3px),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .06' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .cl{left:0;transform-origin:0 50%;animation:openL 4.8s 1.1s cubic-bezier(.62,0,.28,1) forwards}
 .cr{right:0;transform-origin:100% 50%;animation:openR 4.8s 1.1s cubic-bezier(.62,0,.28,1) forwards}
 @keyframes openL{to{transform:translateX(-103%) scaleX(.82)}}
 @keyframes openR{to{transform:translateX(103%) scaleX(.82)}}
-.s-val{position:absolute;top:0;left:0;right:0;height:7.5cqw;z-index:11;background:linear-gradient(180deg,#34040a,#6a0b16 68%,#d9b45f 70%,#8d6c2a 86%,#3a0409);box-shadow:0 1.2cqw 3cqw rgba(0,0,0,.55);animation:fadeout 1.2s 5.2s forwards}
+.s-val{position:absolute;top:0;left:0;right:0;height:7.5cqw;z-index:11;background:linear-gradient(180deg,var(--cu3),var(--cu2) 68%,var(--acc) 70%,var(--cu3) 86%,var(--cu3));box-shadow:0 1.2cqw 3cqw rgba(0,0,0,.55);animation:fadeout 1.2s 5.2s forwards}
 @keyframes fadeout{to{opacity:0}}
 /* family animations */
 .draw{stroke-dasharray:1;stroke-dashoffset:0;animation:draw 2.6s var(--d,0s) ease-in-out both}
@@ -207,8 +232,10 @@ body.bare header.top,body.bare footer.bot{display:none}
 @keyframes flap{from{transform:scaleX(1)}to{transform:scaleX(.35)}}
 .flick{animation:flick 2.4s ease-in-out infinite alternate}
 @keyframes flick{from{opacity:.65}to{opacity:1}}
-.fxp{position:absolute;top:-6cqw;border-radius:60% 0 60% 40%;opacity:0;animation:fall var(--dur) var(--del) linear infinite}
-@keyframes fall{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.9}90%{opacity:.8}100%{opacity:0;transform:translate(var(--sx),190cqw) rotate(var(--rot))}}
+.rip{transform-box:fill-box;transform-origin:center;animation:rip 4.5s var(--d,0s) ease-out infinite}
+@keyframes rip{from{transform:scale(.4);opacity:.8}to{transform:scale(1.35);opacity:0}}
+.fxp{position:absolute;top:-6cqw;border-radius:70% 0 70% 30%;box-shadow:inset -.35cqw -.35cqw .7cqw rgba(0,0,0,.35),.2cqw .4cqw .8cqw rgba(0,0,0,.25);opacity:0;animation:fall var(--dur) var(--del) linear infinite}
+@keyframes fall{0%{opacity:0;transform:perspective(40cqw) translate(0,0) rotate(0) rotateX(0)}10%{opacity:.95}90%{opacity:.85}100%{opacity:0;transform:perspective(40cqw) translate(var(--sx),190cqw) rotate(var(--rot)) rotateX(var(--rx,540deg))}}
 .fxd{position:absolute;border-radius:50%;background:radial-gradient(circle,#fff6d6,#e1bd6a 60%,transparent 70%);opacity:0;animation:dust var(--dur) var(--del) ease-in-out infinite}
 @keyframes dust{0%{opacity:0;transform:translateY(0)}30%{opacity:.9}100%{opacity:0;transform:translateY(-14cqw)}}
 .stage.static *,.stage.static{animation:none!important}
@@ -230,8 +257,8 @@ const BISM='بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِي�
 const HEAD='آپ کو شرکت کی پُرخلوص دعوت دی جاتی ہے';
 const MSG='خوشیوں کے اس حسین موقع پر\nتشریف آوری ہمارے لیے باعثِ مسرت ہوگی';
 const FAM=[
-{id:'rose',n:'The Red Rose Romance',s:'Red Rose',d:'Realistic red roses, drifting petals and a fine gold border on ivory.',P:{bg:'#f9f1e1',bg2:'#efe0c3',ink:'#3d0b13',hi:'#8c0d1f',acc:'#b8975a',c1:'#8c0d1f',c2:'#d3263a'},fx:{k:'petal',n:16,t:5.4,cols:['#a50f24','#c4182c','#8c0d1f']}},
-{id:'heart',n:'The Blue Heart of Elegance',s:'Blue Heart',d:'A heart of sapphire petals gathers in a shimmer of gold dust.',P:{bg:'#071538',bg2:'#10265f',ink:'#f6eedb',hi:'#e6c882',acc:'#c9a45c',c1:'#2f5fd0',c2:'#7fa6ff',dark:1},fx:{k:'dust',n:22,t:5}},
+{id:'rose',n:'The Red Rose Romance',s:'Red Rose',d:'Realistic red roses, drifting petals and a fine gold border on ivory.',P:{bg:'#f9f1e1',bg2:'#efe0c3',ink:'#3d0b13',hi:'#8c0d1f',acc:'#b8975a',c1:'#8c0d1f',c2:'#d3263a'},fx:{k:'petal',n:24,t:5.2,cols:['#a50f24','#c4182c','#8c0d1f','#d8283c']}},
+{id:'heart',n:'The Blue Heart of Elegance',s:'Blue Heart',d:'A heart of sapphire petals gathers in a shimmer of gold dust.',P:{bg:'#071538',bg2:'#10265f',ink:'#f6eedb',hi:'#e6c882',acc:'#c9a45c',c1:'#2f5fd0',c2:'#7fa6ff',dark:1},fx:{k:'petal',n:16,t:5.2,cols:['#2f66d6','#4f8cf0','#8db8ff'],dust:18}},
 {id:'emerald',n:'The Emerald Royal Garden',s:'Emerald Garden',d:'Swaying botanical leaves with golden line art on deep emerald.',P:{bg:'#03251b',bg2:'#0a4a37',ink:'#f6eedb',hi:'#e6c882',acc:'#c9a45c',c1:'#14805c',c2:'#35a97c',dark:1},fx:{k:'none'}},
 {id:'pearl',n:'The Ivory Pearl Collection',s:'Ivory Pearl',d:'Lustrous pearls, soft silk and fine silver florals.',P:{bg:'#f8f3ea',bg2:'#ece3d2',ink:'#403b35',hi:'#7a6a4a',acc:'#a2a2ab',c1:'#fbf8f2',c2:'#d8cbb4'},fx:{k:'none'},sheen:'early'},
 {id:'orchid',n:'The Purple Orchid Luxury',s:'Purple Orchid',d:'Orchids that unfold on a rich plum ground with gold framing.',P:{bg:'#260a2f',bg2:'#451552',ink:'#f5eaf8',hi:'#ebd295',acc:'#c9a45c',c1:'#9b4fc4',c2:'#dcb9ef',dark:1},fx:{k:'none'}},
@@ -243,6 +270,15 @@ const FAM=[
 {id:'butterfly',n:'The Lavender Butterfly Edition',s:'Lavender Butterfly',d:'Butterflies drift over lilac branches with silver ornament.',P:{bg:'#eee6fb',bg2:'#d9cbf2',ink:'#3f2e58',hi:'#6a4a9a',acc:'#8f8fa3',c1:'#9d7fd6',c2:'#cbb8ee'},fx:{k:'none'}},
 {id:'velvet',n:'The Burgundy Velvet Heritage',s:'Burgundy Velvet',d:'Gold filigree grows from the corners across deep velvet burgundy.',P:{bg:'#3a0610',bg2:'#650c1b',ink:'#f6e8cb',hi:'#e6c882',acc:'#d1ae62',c1:'#d1ae62',c2:'#f0d68f',dark:1},fx:{k:'none'},sheen:'glow'}
 ];
+const CU={rose:['#a3182b','#7a0f1e','#4d0812'],heart:['#2d56b8','#16348a','#0a1c55'],emerald:['#138a63','#0a5a41','#053727'],pearl:['#f6efe1','#dccdaf','#ac9b7d'],orchid:['#8a3aa8','#5e1f78','#3a0f4e'],noir:['#3c3835','#1e1c1a','#080707'],blossom:['#f3bccb','#dc8fa7','#ad5f79'],jewel:['#1aa7a3','#0b7a7e','#064b52'],silhouette:['#9d6d48','#6e4529','#45291a'],arch:['#d9bb76','#b08d3c','#7d5f1e'],butterfly:['#b9a0ea','#8d6cc9','#5f3f99'],velvet:['#9a1020','#6c0a15','#4b060e'],peony:['#f6aebb','#de7f94','#aa4b62'],marigold:['#f7a223','#d97d0b','#9a4a05'],crescent:['#27407f','#15265e','#0a1238'],lotus:['#17917d','#0b6358','#053b36'],bluepetal:['#86b5f2','#4d86d8','#2559ab'],rosenoir:['#b8142c','#800b1d','#480611']};
+const NEWF=[
+{id:'peony',n:'The Blush Peony Bloom',s:'Blush Peony',d:'Full, layered peonies in blush and coral on soft ivory.',P:{bg:'#fff6f3',bg2:'#fbe3e2',ink:'#4a2630',hi:'#b24a63',acc:'#c9a07a',c1:'#e07a93',c2:'#fbd0d8'},fx:{k:'petal',n:12,t:6,cols:['#f6a5b6','#fbd0d8','#e07a93']}},
+{id:'marigold',n:'The Saffron Marigold Garland',s:'Saffron Marigold',d:'Strung marigold garlands in saffron and gold, made for the Mehndi mood.',P:{bg:'#fff5df',bg2:'#fbe2b0',ink:'#4a2a08',hi:'#a8480a',acc:'#b8801f',c1:'#f59e0b',c2:'#fcd34d'},fx:{k:'petal',n:18,t:5.4,cols:['#f59e0b','#fbbf24','#ea7a0c']}},
+{id:'crescent',n:'The Midnight Crescent',s:'Midnight Crescent',d:'A golden crescent, drifting stars and lanterns over a midnight skyline.',P:{bg:'#070d2a',bg2:'#14246a',ink:'#f3ecd6',hi:'#ecce83',acc:'#d1ae62',c1:'#243b7a',c2:'#8fa7ee',dark:1},fx:{k:'dust',n:20,t:4.6}},
+{id:'lotus',n:'The Rose Lotus Pond',s:'Rose Lotus',d:'Pink lotus blossoms and lily pads on a still teal pond.',P:{bg:'#04302c',bg2:'#0c5a52',ink:'#f5efe0',hi:'#f3c9d8',acc:'#d1ae62',c1:'#e0598e',c2:'#ffe3ec',dark:1},fx:{k:'none'}},
+{id:'bluepetal',n:'The Blue Petal Rain',s:'Blue Petal Rain',d:'A shower of sapphire petals falls over blue blossoms on ice-white.',P:{bg:'#f6f9ff',bg2:'#dbe8fb',ink:'#14275c',hi:'#2150b0',acc:'#b8975a',c1:'#3e7be0',c2:'#cfe3ff'},fx:{k:'petal',n:34,t:5,cols:['#2f66d6','#4f8cf0','#1c47a8','#8db8ff']}},
+{id:'rosenoir',n:'The Crimson Rose Noir',s:'Crimson Rose Noir',d:'Deep velvet-red roses and falling petals against midnight black.',P:{bg:'#080304',bg2:'#26090f',ink:'#f6e8d3',hi:'#e8c98a',acc:'#c9a45c',c1:'#8f0f22',c2:'#d8283c',dark:1},fx:{k:'petal',n:30,t:5,cols:['#b3162b','#8f0f22','#d8283c']}}];
+FAM.push(...NEWF);FAM.forEach(f=>f.P.cu=CU[f.id]);
 const FB=Object.fromEntries(FAM.map(f=>[f.id,f]));
 const MOCK=(ev)=>({groom:'Ahmed',bride:'Fatima',title:EV[ev].en,date:'2026-12-12',time:'19:00',venue:'Your Venue, Your City',message:'',families:''});
 
@@ -253,16 +289,22 @@ const dl=x=>`calc(var(--t0) + ${x}s)`;
 const FIL='M16 118C16 66 34 40 64 34C88 30 102 48 92 64C82 80 60 72 66 56C69 47 82 47 84 55M16 118C20 94 30 80 44 72M118 16C66 16 40 34 34 64M118 16C94 20 80 30 72 44M30 30C46 30 54 40 54 54';
 function corners(path,stroke,w=1.1,d0=.4,only=[0,1,2,3]){const T=['','translate(360 0) scale(-1 1)','translate(0 640) scale(1 -1)','translate(360 640) scale(-1 -1)'];return only.map(i=>`<g transform="${T[i]}"><path d="${path}" class="draw" pathLength="1" style="--d:${dl(d0+i*.25)}" fill="none" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round"/></g>`).join('')}
 function frame(c,o={}){const{i=12,w=1.4,i2=20,w2=.6,d=.2}=o;return `<rect class="draw" pathLength="1" x="${i}" y="${i}" width="${360-2*i}" height="${640-2*i}" fill="none" stroke="${c}" stroke-width="${w}" style="--d:${dl(d)}"/><rect class="draw" pathLength="1" x="${i2}" y="${i2}" width="${360-2*i2}" height="${640-2*i2}" fill="none" stroke="${c}" stroke-width="${w2}" style="--d:${dl(d+.3)}"/>`}
-function rose(cx,cy,r,rot,d,u){let s='';for(let i=0;i<3;i++)for(let k=0;k<6;k++){const rr=r*(1-i*.27);s+=`<ellipse cx="0" cy="${-rr*.52}" rx="${rr*.5}" ry="${rr*.6}" transform="rotate(${k*60+i*22})" fill="url(#rg${u})" stroke="rgba(40,0,6,.35)" stroke-width=".6"/>`}
- s+=`<circle r="${r*.17}" fill="#7a0a1a"/><path d="M${-r*.11} 0a${r*.11} ${r*.11} 0 1 1 ${r*.22} 0" fill="none" stroke="rgba(40,0,6,.5)" stroke-width=".8"/>`;
- return `<g transform="translate(${cx} ${cy}) rotate(${rot})"><g class="pop" style="--d:${dl(d)}">${s}</g></g>`}
+function shadowDef(u){return `<filter id="sh${u}" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="1.2" stdDeviation="1.4" flood-color="#000" flood-opacity=".4"/></filter>`}
+function gradDef(id,c){return `<linearGradient id="${id}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="${c[0]}"/><stop offset=".55" stop-color="${c[1]}"/><stop offset="1" stop-color="${c[2]}"/></linearGradient>`}
+function bloom(cx,cy,R,rot,d,u,id,o={}){const n=o.n||[8,7,6,5],w=o.w||.62,pt=o.pt;let s='';
+ n.forEach((N,i)=>{const r=R*(1-i*(.78/n.length)),off=i*(180/N)*.85;for(let k=0;k<N;k++){const a=(k*360/N+off).toFixed(1),ww=r*w*(i?1:1.06);
+  const dd=pt?`M0 0C${ww} ${-r*.5} ${ww*.4} ${-r*.92} 0 ${-r}C${-ww*.4} ${-r*.92} ${-ww} ${-r*.5} 0 0Z`:`M0 0C${ww} ${-r*.12} ${ww*1.12} ${-r*.9} 0 ${-r}C${-ww*1.12} ${-r*.9} ${-ww} ${-r*.12} 0 0Z`;
+  s+=`<g transform="rotate(${a})"><path d="${dd}" fill="url(#${id})" stroke="rgba(0,0,0,.3)" stroke-width=".5"/>${o.hl===0?'':`<path d="M${-ww*.55} ${-r*.78}Q0 ${-r*1.03} ${ww*.55} ${-r*.78}" fill="none" stroke="rgba(255,255,255,.3)" stroke-width=".8"/>`}</g>`}});
+ s+=`<circle r="${R*.09}" fill="${o.core||'rgba(0,0,0,.45)'}"/>`;
+ return `<g transform="translate(${cx} ${cy}) rotate(${rot})" filter="url(#sh${u})"><g class="pop" style="--d:${dl(d)}">${s}</g></g>`}
+function rose(cx,cy,r,rot,d,u){return bloom(cx,cy,r,rot,d,u,'rg'+u,{n:[9,8,7,6,5],w:.6,core:'#3a040c'})}
 function leaf(x,y,a,sc,c,stroke){return `<path transform="translate(${x} ${y}) rotate(${a}) scale(${sc})" d="M0 0C10-12 30-14 46 0C30 14 10 12 0 0Z" fill="${c}" stroke="${stroke||'rgba(0,0,0,.25)'}" stroke-width=".6"/>`}
 function flower(x,y,r,stroke,sw=.8){let s='';for(let k=0;k<6;k++)s+=`<ellipse cx="0" cy="${-r*.6}" rx="${r*.28}" ry="${r*.6}" transform="rotate(${k*60})" fill="none" stroke="${stroke}" stroke-width="${sw}"/>`;return `<g transform="translate(${x} ${y})">${s}<circle r="${r*.14}" fill="${stroke}"/></g>`}
 const ART={
 rose(P,u){
  const rc=(dx)=>`${leaf(0,0,10,1.3,'#2f5d3a','#1d3f27')}${leaf(0,0,60,1.2,'#356642','#1d3f27')}${leaf(0,0,110,1.1,'#2a5535','#1d3f27')}`;
  const cluster=(t,base)=>`<g transform="${t}"><g transform="translate(38 40)">${leaf(0,0,-20,1.6,'#2f5d3a','#1d3f27')}${leaf(0,0,40,1.5,'#356642','#1d3f27')}${leaf(0,0,85,1.4,'#2a5535','#1d3f27')}${leaf(0,0,-70,1.3,'#2f5d3a','#1d3f27')}</g>${rose(50,52,34,10,base,u)}${rose(110,34,22,-20,base+.3,u)}${rose(30,112,22,30,base+.5,u)}${rose(92,92,14,0,base+.8,u)}</g>`;
- return `<defs><radialGradient id="rg${u}" cx=".5" cy=".7" r=".7"><stop offset="0" stop-color="${P.c2}"/><stop offset=".7" stop-color="${P.c1}"/><stop offset="1" stop-color="#4a0610"/></radialGradient></defs>`+frame(P.acc)+corners(FIL,P.acc,1,.6,[1,2])+cluster('scale(.72)',.2)+cluster('translate(360 640) rotate(180) scale(.72)',.5)},
+ return `<defs>${gradDef('rg'+u,['#4a0510','#a8132a','#e8404f'])}${shadowDef(u)}</defs>`+frame(P.acc)+corners(FIL,P.acc,1,.6,[1,2])+cluster('scale(.72)',.2)+cluster('translate(360 640) rotate(180) scale(.72)',.5)},
 heart(P,u,rn){let s=frame(P.acc,{i:14,i2:22});const pt=(t,k)=>[180+k*16*Math.sin(t)**3,272-k*(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t))];
  [[8.3,46,P.c2,.55],[6.5,34,P.c1,.6],[4.6,24,P.c2,.5]].forEach(([k,N,c,op],ri)=>{for(let i=0;i<N;i++){const t=i/N*Math.PI*2,[x,y]=pt(t,k);s+=`<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(rn()*360)|0})"><ellipse class="gather" rx="11" ry="5.2" fill="${c}" fill-opacity="${op}" stroke="${P.c2}" stroke-width=".5" style="--tx:${((rn()-.5)*460)|0}px;--ty:${((rn()-.3)*560)|0}px;--d:${dl(ri*.5+i/N*1.6)}"/></g>`}});
  for(let i=0;i<46;i++){const x=rn()*340+10,y=rn()*600+20;s+=`<circle class="twinkle" cx="${x|0}" cy="${y|0}" r="${(rn()*1.6+.5).toFixed(1)}" fill="#f2d98d" style="--d:${dl(2+rn()*3)}"/>`}
@@ -322,6 +364,36 @@ velvet(P,u,rn){let s=frame(P.acc,{i:12,w:2,i2:21,w2:.7});s+=`<rect class="draw" 
  for(let x=90;x<=270;x+=30){s+=`<g class="fadein" style="--d:${dl(1.5+x/150)}">${flower(x,16,6,P.acc,.8)}${flower(x,624,6,P.acc,.8)}</g>`}
  return s+`<path class="draw" pathLength="1" d="M150 54C165 40 180 66 180 54C180 66 195 40 210 54" fill="none" stroke="${P.acc}" stroke-width="1" style="--d:${dl(1.6)}"/>`}
 };
+
+const _lf=(x,y,a,sc,d,c='#4c7a4e')=>`<g transform="translate(${x} ${y}) rotate(${a}) scale(${sc})"><g class="sway" style="--d:${dl(d)}"><path d="M0 0C14-18 44-20 66 0C44 20 14 18 0 0Z" fill="${c}" stroke="rgba(0,0,0,.3)" stroke-width=".6"/><path d="M2 0H58" stroke="rgba(255,255,255,.35)" stroke-width=".7"/></g></g>`;
+function cluster4(id,u,t,b0,R,o,leaf){return `<g transform="${t}">${leaf||''}${bloom(52,54,R,8,b0,u,id,o)}${bloom(112,34,R*.64,-14,b0+.4,u,id,o)}${bloom(28,116,R*.62,22,b0+.7,u,id,o)}${bloom(98,98,R*.4,0,b0+1,u,id,o)}</g>`}
+Object.assign(ART,{
+peony(P,u){const id='pg'+u,o={n:[12,10,9,8,7,6],w:.7,core:'#b8566b'};const lv=_lf(20,30,15,1.3,.2)+_lf(30,20,60,1.2,.3)+_lf(14,44,-30,1.2,.4);
+ return `<defs>${gradDef(id,['#c9566f','#f29bb0','#fff0f3'])}${shadowDef(u)}</defs>`+frame(P.acc)+cluster4(id,u,'scale(.72)',.4,40,o,lv)+cluster4(id,u,'translate(360 640) rotate(180) scale(.72)',.7,40,o,lv)},
+marigold(P,u){const id='mg'+u,o={n:[10,8,6],w:.34,hl:0,core:'#7c3a04'};let s=`<defs>${gradDef(id,['#9a4a05','#f59e0b','#fde68a'])}${shadowDef(u)}</defs>`+frame(P.acc,{i:10,i2:17});
+ s+=`<path class="draw" pathLength="1" d="M0 14Q180 46 360 14" fill="none" stroke="#4c7a4e" stroke-width="1.6" style="--d:${dl(.2)}"/><path class="draw" pathLength="1" d="M26 14V620M334 14V620" fill="none" stroke="#4c7a4e" stroke-width="1.4" style="--d:${dl(.3)}"/>`;let n=0;
+ for(let i=0;i<=12;i++){const t=i/12,x=t*360,y=14+2*(1-t)*t*32;s+=bloom(x.toFixed(1),y.toFixed(1),11,i*29,.5+i*.12,u,id,o)}
+ for(let y=40;y<=610;y+=26){s+=bloom(26,y,10,y,.8+n*.06,u,id,o)+bloom(334,y,10,y*2,.9+n*.06,u,id,o);n++}
+ return s},
+crescent(P,u,rn){let s=`<defs><linearGradient id="gd${u}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1b8"/><stop offset=".5" stop-color="#e2b95a"/><stop offset="1" stop-color="#9c7326"/></linearGradient><mask id="mk${u}"><rect width="360" height="640" fill="#fff"/><circle cx="335" cy="60" r="36" fill="#000"/></mask><radialGradient id="hl${u}"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".55"/><stop offset="1" stop-color="#ffe9a0" stop-opacity="0"/></radialGradient></defs>`+frame(P.acc,{i:12,i2:19});
+ s+=`<g class="fadein" style="--d:${dl(.4)}"><circle cx="318" cy="72" r="95" fill="url(#hl${u})"/><circle cx="318" cy="72" r="42" fill="url(#gd${u})" mask="url(#mk${u})"/></g>`;
+ const st=(x,y,r,d)=>`<path class="twinkle" transform="translate(${x} ${y}) scale(${r})" d="M0-6L1.5-1.5L6 0L1.5 1.5L0 6L-1.5 1.5L-6 0L-1.5-1.5Z" fill="#fff1c0" style="--d:${dl(d)}"/>`;
+ for(let i=0;i<26;i++)s+=st((rn()*320+20)|0,(rn()*470+30)|0,(rn()*1.1+.35).toFixed(2),1+rn()*3);
+ const lan=(x,d)=>`<g class="fadein" style="--d:${dl(d)}"><path d="M${x} 20V118" stroke="${P.acc}" stroke-width="1"/><path d="M${x-10} 118h20l4 8v28l-4 8h-20l-4-8v-28zM${x-5} 118l5-9 5 9" fill="${P.c2}" fill-opacity=".3" stroke="${P.acc}" stroke-width="1"/><circle class="flick" cx="${x}" cy="140" r="5" fill="#ffe9a0"/></g>`;
+ s+=lan(36,1.2)+lan(54,1.6);
+ s+=`<g class="up" style="--d:${dl(.6)}"><path d="M20 604V586H48V556L52 546L56 556V586H90C90 566 104 552 122 552S154 566 154 586H196V560L200 548L204 560V586H238C238 568 252 556 270 556S302 568 302 586H304V556L308 546L312 556V586H340V604Z" fill="${P.acc}" fill-opacity=".2" stroke="${P.acc}" stroke-width="1"/></g>`;return s},
+lotus(P,u){const id='lg'+u,o={n:[8,8,7,6],w:.5,pt:1,core:'#f6c24a'};const pad=(x,y,rx,ry,d)=>`<g class="fadein" style="--d:${dl(d)}"><ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#1b7d6e" stroke="#0e5a4f" stroke-width=".8"/><path d="M${x} ${y}L${x+rx} ${y-ry*.2}M${x} ${y}L${x-rx*.8} ${y+ry*.5}M${x} ${y}L${x+rx*.2} ${y+ry}M${x} ${y}L${x-rx*.7} ${y-ry*.6}" stroke="#4fb09c" stroke-width=".7" opacity=".7"/></g>`;
+ let s=`<defs>${gradDef(id,['#8f2a58','#e0598e','#ffe3ec'])}${shadowDef(u)}</defs>`+frame(P.acc);
+ for(let i=0;i<4;i++)s+=`<ellipse class="rip" cx="180" cy="596" rx="${60+i*34}" ry="${10+i*6}" fill="none" stroke="#9be0d3" stroke-width=".8" style="--d:${dl(1+i*.9)}"/>`;
+ return s+pad(140,600,36,12,.8)+pad(36,520,28,10,1)+pad(310,622,32,11,1.2)+pad(330,92,26,9,1.3)+bloom(70,574,40,0,1.4,u,id,o)+bloom(304,580,34,0,1.8,u,id,o)+bloom(316,50,24,0,2.1,u,id,o)+bloom(40,54,20,0,2.4,u,id,o)},
+bluepetal(P,u,rn){const id='bp'+u,o={n:[9,8,7,6],w:.55,core:'#12296b'};const pt=(x,y,a,s,d)=>`<path class="fadein" style="--d:${dl(d)}" transform="translate(${x} ${y}) rotate(${a}) scale(${s})" d="M0 0C10-4 14-20 0-26C-14-20-10-4 0 0Z" fill="url(#${id})" stroke="rgba(0,0,0,.25)" stroke-width=".5"/>`;
+ let s=`<defs>${gradDef(id,['#15337d','#3e7be0','#cfe3ff'])}${shadowDef(u)}</defs>`+frame(P.acc)+cluster4(id,u,'scale(.8)',.2,38,o)+cluster4(id,u,'translate(360 640) rotate(180) scale(.8)',.5,38,o);
+ for(let i=0;i<18;i++){const left=i%2,x=left?rn()*70+10:rn()*70+280,y=rn()*600+20;s+=pt(x|0,y|0,(rn()*360)|0,(rn()*.7+.5).toFixed(2),1+rn()*2)}return s},
+rosenoir(P,u,rn){const id='rn'+u,o={n:[9,8,7,6,5],w:.6,core:'#2a0208'};let s=`<defs>${gradDef(id,['#2a0208','#8f0f22','#e03045'])}${shadowDef(u)}</defs>`+frame(P.acc,{i:11,i2:18,w:1.2,w2:.5});
+ const lv=_lf(20,30,15,1.3,.2,'#1f4a2c')+_lf(30,20,60,1.2,.3,'#1f4a2c')+_lf(14,44,-30,1.2,.4,'#1f4a2c');
+ s+=cluster4(id,u,'scale(.85)',.3,46,o,lv)+cluster4(id,u,'translate(360 640) rotate(180) scale(.85)',.6,46,o,lv)+bloom(334,34,17,10,1.2,u,id,o)+bloom(28,610,17,-20,1.5,u,id,o);
+ for(let i=0;i<24;i++)s+=`<circle class="twinkle" cx="${(rn()*340+10)|0}" cy="${(rn()*620+10)|0}" r="${(rn()+.5).toFixed(1)}" fill="#f2d98d" style="--d:${dl(2+rn()*3)}"/>`;return s}
+});
 /* ====================== STAGE ====================== */
 const isUr=s=>/[؀-ۿ]/.test(s||'');
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -331,7 +403,7 @@ const T={bism:5.6,head:6.7,ur:7.7,en:8.2,names:8.9,fams:9.7,msg:10.3,det:11.3};
 function stageHTML(famId,ev,d,anim){
  const f=FB[famId]||FAM[0],P=f.P,u='u'+(++UID),rn=rng(famId.split('').reduce((a,c)=>a*31+c.charCodeAt(0),7));
  const e=EV[ev]||EV.mehndi;
- const st=`--bg:${P.bg};--bg2:${P.bg2};--ink:${P.ink};--hi:${P.hi};--acc:${P.acc};--c1:${P.c1};--c2:${P.c2};--k:${f.k||1};--t0:3.4s`;
+ const st=`--bg:${P.bg};--bg2:${P.bg2};--ink:${P.ink};--hi:${P.hi};--acc:${P.acc};--c1:${P.c1};--c2:${P.c2};--k:${f.k||1};--t0:3.4s;--cu1:${P.cu[0]};--cu2:${P.cu[1]};--cu3:${P.cu[2]}`;
  const r=k=>anim?`rv" style="--d:${T[k]}s`:'';
  const nm=(t,cls)=>`<span class="nm ${isUr(t)?'ur':''} ${String(t||'').length>14?'sm':''}" dir="auto">${esc(t)}</span>`;
  const msg=(d.message||'').trim()||MSG;
@@ -344,9 +416,11 @@ function stageHTML(famId,ev,d,anim){
 <div class="grp"><div class="det ${r('det')}"><div class="dt">${fmtDate(d.date)}</div><div class="tm">${fmtTime(d.time)}</div><div class="vn ${isUr(d.venue)?'ur':''}" dir="auto">${esc(d.venue)}</div></div></div></div>
 ${anim?`<div class="s-sheen ${f.sheen||''}"></div><div class="s-val"></div><div class="s-cur"><div class="cp cl"></div><div class="cp cr"></div></div>`:''}</div>`}
 function spawnFx(stageEl,famId){const f=FB[famId],x=f.fx;if(!x||x.k==='none')return;const box=stageEl.querySelector('.s-fx');if(!box)return;let h='';
- for(let i=0;i<x.n;i++){const del=(x.t+Math.random()*7).toFixed(2),dur=(7+Math.random()*6).toFixed(1);
-  if(x.k==='petal'){const s=(1.8+Math.random()*2.4).toFixed(1),c=x.cols[i%x.cols.length];h+=`<i class="fxp" style="left:${(Math.random()*100).toFixed(1)}%;width:${s}cqw;height:${(s*1.3).toFixed(1)}cqw;background:${c};--dur:${dur}s;--del:${del}s;--sx:${((Math.random()-.5)*30).toFixed(1)}cqw;--rot:${(Math.random()*540-180)|0}deg"></i>`}
-  else{const s=(.8+Math.random()*1.3).toFixed(1);h+=`<i class="fxd" style="left:${(Math.random()*100).toFixed(1)}%;top:${(Math.random()*100).toFixed(1)}%;width:${s}cqw;height:${s}cqw;--dur:${(4+Math.random()*4).toFixed(1)}s;--del:${del}s"></i>`}}
+ const R=Math.random;
+ if(x.cols)for(let i=0;i<x.n;i++){const del=(x.t+R()*7).toFixed(2),dur=(7+R()*7).toFixed(1),s=(1.4+R()*3).toFixed(1),c=x.cols[i%x.cols.length],bl=R()<.25?'filter:blur(.6px);':'';
+  h+=`<i class="fxp" style="${bl}left:${(R()*100).toFixed(1)}%;width:${s}cqw;height:${(s*1.35).toFixed(1)}cqw;background:radial-gradient(ellipse at 30% 25%,rgba(255,255,255,.45),transparent 45%),${c};--dur:${dur}s;--del:${del}s;--sx:${((R()-.5)*34).toFixed(1)}cqw;--rot:${(R()*540-180)|0}deg;--rx:${(360+R()*720)|0}deg"></i>`}
+ const nd=x.k==='dust'?x.n:(x.dust||0);
+ for(let i=0;i<nd;i++){const s=(.8+R()*1.3).toFixed(1);h+=`<i class="fxd" style="left:${(R()*100).toFixed(1)}%;top:${(R()*100).toFixed(1)}%;width:${s}cqw;height:${s}cqw;--dur:${(4+R()*4).toFixed(1)}s;--del:${(x.t+R()*7).toFixed(2)}s"></i>`}
  box.innerHTML=h}
 const Snd={ctx:null,on:false,nodes:[],start(){if(!this.on)return;try{this.stop();const c=this.ctx=this.ctx||new(window.AudioContext||window.webkitAudioContext)();if(c.state==='suspended')c.resume();const t=c.currentTime+.2,N=[261.63,329.63,392,523.25,392,329.63,293.66,349.23,440,587.33,440,349.23,261.63,392,523.25,659.25];N.forEach((fr,i)=>{const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=fr;const s=t+i*.85;g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(.05,s+.4);g.gain.exponentialRampToValueAtTime(.0008,s+2.6);o.connect(g);g.connect(c.destination);o.start(s);o.stop(s+2.8);this.nodes.push(o)})}catch(e){}},
  stop(){this.nodes.forEach(o=>{try{o.stop()}catch(e){}});this.nodes=[]},toggle(){this.on=!this.on;this.on?this.start():this.stop();return this.on}};
@@ -358,7 +432,7 @@ function genProducts(){return FAM.flatMap(f=>EVK.map(ev=>({id:`${f.id}-${ev}`,ti
 (function init(){DB.users=DB.users||[];DB.orders=DB.orders||[];DB.messages=DB.messages||[];
  DB.bundles=DB.bundles||[{id:'b1',name:'Mehndi + Baraat',events:['mehndi','baraat'],discount:10,price:0,active:true},{id:'b2',name:'Baraat + Walimah',events:['baraat','walimah'],discount:10,price:0,active:true},{id:'b3',name:'Mehndi + Walimah',events:['mehndi','walimah'],discount:10,price:0,active:true},{id:'b4',name:'Complete Mehndi + Baraat + Walimah',events:['mehndi','baraat','walimah'],discount:15,price:0,active:true}];
  DB.settings=Object.assign({brand:'Noor Invitations',siteUrl:'',linkDays:90,email:'',whatsapp:'',allowEdits:true,payMethods:[]},DB.settings||{});
- DB.products=DB.products||genProducts();DB.draft=DB.draft||null;DB.session=DB.session||null;DB.admin=DB.admin||null;DB.adminOn=!!DB.adminOn})();
+ const fresh=!DB.products;DB.products=DB.products||genProducts();DB.famSeen=DB.famSeen||(fresh?FAM.map(f=>f.id):FAM.slice(0,12).map(f=>f.id));FAM.forEach(f=>{if(!DB.famSeen.includes(f.id)){EVK.forEach(ev=>{const id=`${f.id}-${ev}`;if(!DB.products.some(p=>p.id===id))DB.products.push({id,title:`${f.s} ${EV[ev].en}`,event:ev,family:f.id,price:EV[ev].price,active:true,thumb:null,custom:false})});DB.famSeen.push(f.id)}});DB.draft=DB.draft||null;DB.session=DB.session||null;DB.admin=DB.admin||null;DB.adminOn=!!DB.adminOn})();
 let memTimer;function save(){try{localStorage.setItem(LSK,JSON.stringify(DB))}catch(e){}}
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const money=n=>`PKR ${Number(n||0).toLocaleString('en-US')}`;
@@ -394,15 +468,15 @@ function chrome(route){const u=me(),b=esc(S().brand);
 const card=p=>{const f=FB[p.family]||{n:p.family};return `<a class="pc" href="#product-${p.id}"><div class="pc-th">${p.thumb?`<img src="${p.thumb}" alt="${esc(p.title)}" loading="lazy">`:stageHTML(p.family,p.event,MOCK(p.event),false)}</div><div class="pc-b"><div class="pc-t">${esc(p.title)}</div><div class="pc-m">${esc(f.n)}</div><div class="pc-p">${money(p.price)}</div></div></a>`};
 const live=()=>DB.products.filter(p=>p.active);
 const sample=(f,ev)=>stageHTML(f,ev,MOCK(ev),false);
-function pgHome(){const feat=['rose','heart','noir','blossom','silhouette','arch'];
+function pgHome(){const feat=['rose','bluepetal','rosenoir','peony','crescent','arch'];
  return `<section class="hero"><div class="wrap g"><div><span class="eyebrow">Digital wedding invitations</span><h1>Make Your Special Moments Unforgettable</h1><p class="lead">Beautifully crafted digital wedding invitations, designed to celebrate your most precious moments.</p><p class="small" style="max-width:46ch">Choose a design, personalize the names, dates and venue, and share one animated invitation link with your family and friends.</p><div class="row" style="margin-top:22px"><a class="btn" href="#invitations">Explore Invitations</a><a class="btn alt" href="#collection">Discover Designs</a></div></div><div class="hero-art"><div class="s s1">${sample('heart','mehndi')}</div><div class="s s3">${sample('blossom','walimah')}</div><div class="s s2">${sample('rose','baraat')}</div></div></div></section>
 <section><div class="wrap"><div class="center"><span class="eyebrow">Three celebrations</span><h2>Featured Categories</h2><p class="lead">Every design is available for each event, so the whole wedding matches.</p></div><div class="cats" style="margin-top:32px">${[['mehndi','emerald','Mehndi','The colourful opening evening.'],['baraat','velvet','Baraat','The grand arrival of the groom.'],['walimah','pearl','Walimah','The celebration hosted by the groom\'s family.']].map(([e,f,n,t])=>`<a class="cat" href="#invitations-${e}"><div>${sample(f,e)}</div><div><h3>${n}</h3><p>${t}</p></div></a>`).join('')}</div></div></section>
-<section class="band"><div class="wrap"><div class="center"><span class="eyebrow">Selected designs</span><h2>Featured Designs</h2></div><div class="grid" style="margin-top:32px">${feat.map(f=>prodFor(f,'mehndi')).filter(Boolean).map(card).join('')}</div><p class="center" style="margin-top:28px"><a class="btn alt" href="#collection">See all 12 design families</a></p></div></section>
+<section class="band"><div class="wrap"><div class="center"><span class="eyebrow">Selected designs</span><h2>Featured Designs</h2></div><div class="grid" style="margin-top:32px">${feat.map(f=>prodFor(f,'mehndi')).filter(Boolean).map(card).join('')}</div><p class="center" style="margin-top:28px"><a class="btn alt" href="#collection">See all ${FAM.length} design families</a></p></div></section>
 <section><div class="wrap"><div class="center"><span class="eyebrow">Simple process</span><h2>How It Works</h2></div><div class="steps" style="margin-top:32px">${[['Choose Your Design','Browse the collection and pick a family and an event.'],['Personalize Your Invitation','Add the names, dates, times, venues and your message.'],['Preview Your Card','Watch your own invitation play before you order.'],['Share Your Unique Link','Send one link by WhatsApp to everyone you are inviting.']].map(([t,d],i)=>`<div class="step"><b>0${i+1}</b><h4>${t}</h4><p class="small">${d}</p></div>`).join('')}</div></div></section>
-<section class="band"><div class="wrap"><div class="center"><span class="eyebrow">What you receive</span><h2>Why Choose Us</h2></div><div class="why" style="margin-top:32px">${[['Premium original designs','Twelve design families, each drawn as a layered 2D composition.'],['Personalized invitations','Your names, dates, venues and message in the finished card.'],['Elegant animations','A curtain opening, Bismillah, Urdu text and a graceful reveal.'],['Mobile-friendly viewing','The invitation scales to phones, tablets and desktops.'],['Easy sharing','One link per invitation, ready for WhatsApp.'],['Individual card purchases','Buy only the events you need, or choose an optional bundle.']].map(([t,d])=>`<div><h4>${t}</h4><p>${d}</p></div>`).join('')}</div></div></section>`}
+<section class="band"><div class="wrap"><div class="center"><span class="eyebrow">What you receive</span><h2>Why Choose Us</h2></div><div class="why" style="margin-top:32px">${[['Premium original designs',FAM.length+' design families, each drawn as a layered 2D composition.'],['Personalized invitations','Your names, dates, venues and message in the finished card.'],['Elegant animations','A curtain opening, Bismillah, Urdu text and a graceful reveal.'],['Mobile-friendly viewing','The invitation scales to phones, tablets and desktops.'],['Easy sharing','One link per invitation, ready for WhatsApp.'],['Individual card purchases','Buy only the events you need, or choose an optional bundle.']].map(([t,d])=>`<div><h4>${t}</h4><p>${d}</p></div>`).join('')}</div></div></section>`}
 function pgInvitations(cat){cat=EV[cat]?cat:'';const list=live().filter(p=>!cat||p.event===cat);
  return `<section><div class="wrap"><span class="eyebrow">Wedding invitations</span><h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">Choose Your Invitation</h1><p class="lead">Every card is sold on its own. Bundles are optional and are applied when you personalize more than one event of the same design.</p><div class="tabs" style="margin-top:24px"><a href="#invitations" class="${cat?'':'on'}">All (${live().length})</a>${EVK.map(e=>`<a href="#invitations-${e}" class="${cat===e?'on':''}">${EV[e].en}</a>`).join('')}</div>${list.length?`<div class="grid">${list.map(card).join('')}</div>`:'<div class="note">No invitations are available in this category right now.</div>'}</div></section>`}
-function pgCollection(){return `<section><div class="wrap"><span class="eyebrow">Design collection</span><h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">Twelve Design Families</h1><p class="lead">Each family shares one visual identity across Mehndi, Baraat and Walimah.</p><div style="margin-top:28px">${FAM.map(f=>{const ps=live().filter(p=>p.family===f.id);return ps.length?`<div class="fam"><div><h3>${f.n}</h3><p class="small">${f.d}</p><p class="small">${f.P.dark?'Dark':'Light'} palette</p></div><div class="grid">${ps.map(card).join('')}</div></div>`:''}).join('')}</div></div></section>`}
+function pgCollection(){return `<section><div class="wrap"><span class="eyebrow">Design collection</span><h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">${FAM.length} Design Families</h1><p class="lead">Each family shares one visual identity across Mehndi, Baraat and Walimah.</p><div style="margin-top:28px">${FAM.map(f=>{const ps=live().filter(p=>p.family===f.id);return ps.length?`<div class="fam"><div><h3>${f.n}</h3><p class="small">${f.d}</p><p class="small">${f.P.dark?'Dark':'Light'} palette</p></div><div class="grid">${ps.map(card).join('')}</div></div>`:''}).join('')}</div></div></section>`}
 function pgProduct(id){const p=prod(id);if(!p||!p.active)return nf();const f=FB[p.family]||FAM[0];const sib=EVK.map(e=>DB.products.find(x=>x.family===p.family&&x.event===e&&x.active)).filter(Boolean);
  const bs=DB.bundles.filter(b=>b.active);
  return `<section><div class="wrap"><p class="small"><a href="#collection">Design Collection</a> / ${esc(f.n)}</p><div class="split"><div class="pl" id="pl"><div class="pl-stage" id="plst">${p.thumb?`<img src="${p.thumb}" alt="">`:stageHTML(p.family,p.event,MOCK(p.event),false)}</div><button class="pl-play" data-act="play" data-fam="${p.family}" data-ev="${p.event}" id="plplay"><span>Play animated preview</span></button><div class="pl-bar"><button class="btn alt sm rp" data-act="replay">Replay</button><button class="btn alt sm" data-act="snd">Sound: ${Snd.on?'On':'Off'}</button></div></div>
@@ -444,7 +518,7 @@ async function afterView(slug){const hv=$('#hv');if(!hv)return;let f=findItem(sl
  hv.innerHTML=`${rec.state!=='active'?`<div class="hv-ban">Only you can see this invitation. It is currently ${rec.state}.</div>`:''}<div class="hv-st" id="plst"></div><div class="hv-bar"><button class="btn sm rp" data-act="replay">Replay</button><button class="btn sm" data-act="snd">Sound: ${Snd.on?'On':'Off'}</button><a class="btn sm" target="_blank" rel="noopener" href="${waLink(url)}">WhatsApp</a><button class="btn sm" data-act="copy" data-v="${esc(url)}">Copy link</button></div>`;
  mountAnimated($('#plst'),rec.family,rec.event,rec.data)}
 const doc=(t,b)=>`<section><div class="narrow pol"><span class="eyebrow">${S().brand}</span><h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">${t}</h1>${b}</div></section>`;
-function pgAbout(){return doc('About Us',`<p class="lead">${esc(S().brand)} creates animated digital wedding invitations for Pakistani weddings.</p><p>Every invitation opens with a red velvet curtain, followed by Bismillah, an Urdu invitation, the names of the couple and the event details. Each design is a layered 2D composition: illustration, line art, light and typography, with no 3D models.</p><p>Twelve design families are available, and each family has matching Mehndi, Baraat and Walimah cards. The three cards of a family share one visual identity so your guests see one consistent wedding.</p><h3>How we deliver</h3><p>You personalize a card, preview it and place an order. After your payment is verified, your invitation is published at its own link. You share that link with your guests. We do not provide MP4 or HTML downloads, because the invitation plays on its hosted page.</p><p>For questions, see the <a href="#contact">Contact</a> page.</p>`)}
+function pgAbout(){return doc('About Us',`<p class="lead">${esc(S().brand)} creates animated digital wedding invitations for Pakistani weddings.</p><p>Every invitation opens with a red velvet curtain, followed by Bismillah, an Urdu invitation, the names of the couple and the event details. Each design is a layered 2D composition: illustration, line art, light and typography, with no 3D models.</p><p>${FAM.length} design families are available, and each family has matching Mehndi, Baraat and Walimah cards. The three cards of a family share one visual identity so your guests see one consistent wedding.</p><h3>How we deliver</h3><p>You personalize a card, preview it and place an order. After your payment is verified, your invitation is published at its own link. You share that link with your guests. We do not provide MP4 or HTML downloads, because the invitation plays on its hosted page.</p><p>For questions, see the <a href="#contact">Contact</a> page.</p>`)}
 function pgContact(){const s=S();const ways=[s.email?`<li>Email: ${esc(s.email)}</li>`:'',s.whatsapp?`<li>WhatsApp: ${esc(s.whatsapp)}</li>`:''].join('');
  return doc('Contact',`${ways?`<ul>${ways}</ul>`:`<div class="note">The store owner has not published contact details yet. You can still leave a message below.</div>`}<form data-form="contact" class="box"><label>Your name</label><input name="name" required><label>Email or phone</label><input name="contact" required><label>Message</label><textarea name="message" rows="5" required></textarea><p><button class="btn" type="submit">Send message</button></p><p class="small">Messages are saved in the store's admin inbox.</p></form>`)}
 function pgPrivacy(){return doc('Privacy Policy',`<p>This policy explains what information ${esc(S().brand)} handles when you use this website.</p><h3>Information we collect</h3><ul><li>Account details: your name, email address and password.</li><li>Order details: the products you buy and the payment method you choose.</li><li>Invitation content: names, family names, dates, times, venues and messages you enter.</li><li>Messages you send through the contact form.</li></ul><h3>How we use it</h3><ul><li>To create your personalized invitation and publish it at its link.</li><li>To process and verify your order and to support you.</li></ul><h3>Invitation links are shareable</h3><p>Anyone who has your invitation link can open it and see the details you entered. Share it only with people you want to invite.</p><h3>Storage</h3><p>Your information is stored with the service provider that hosts this website's data. We do not sell your information.</p><h3>Your choices</h3><p>You can ask us to correct or delete your account and invitation data through the Contact page.</p>`)}
